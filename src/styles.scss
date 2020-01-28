@@ -14,6 +14,11 @@ html, body {
   user-select: none;
 }
 
+.form-check, .form-check * {
+  user-select: none;
+  cursor: pointer !important;
+}
+
 // Color picker theme
 .color-picker {
   border-color: transparent !important;
@@ -23,4 +28,5 @@ html, body {
 
 .color-picker .cursor {
   border-color: #b5b5b5 !important;
+  cursor: pointer !important;
 }

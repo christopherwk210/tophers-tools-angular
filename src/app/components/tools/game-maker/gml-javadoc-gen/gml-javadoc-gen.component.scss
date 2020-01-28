@@ -1,0 +1,9 @@
+@import "../../../../../styles/vars.scss";
+
+:host {
+  @include tool-card-container;
+}
+
+.text-pink {
+  color: $pink;
+}

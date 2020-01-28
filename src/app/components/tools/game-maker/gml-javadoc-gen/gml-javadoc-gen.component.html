@@ -1,1 +1,15 @@
-<p>gml-javadoc-gen works!</p>
+<div class="card bg-secondary">
+  <div class="card-header bg-primary no-text">GML JavaDoc Gen</div>
+  <div class="card-body bg-secondary">
+    <div class="form-group form-check">
+      <input type="checkbox" class="form-check-input" id="args-switch" [value]="argsSwitch" (input)="handleSwitchToggle($event)">
+      <label class="form-check-label text-light" for="args-switch">Use <span class="text-pink">args</span> instead of <span class="text-pink">param</span></label>
+    </div>
+    <div class="form-group">
+      <input type="text" class="form-control bg-dark text-light border-light" placeholder="my_script(arg1, arg2)" [value]="gmsFunc" (input)="handleFuncChange($event)">
+    </div>
+    <div class="form-group">
+      <textarea class="form-control bg-dark text-light border-light" rows="5" readonly="readonly" [value]="output" appClickSelect></textarea>
+    </div>
+  </div>
+</div>
