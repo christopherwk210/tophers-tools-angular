@@ -1,1 +1,32 @@
-<p>ratios works!</p>
+<div class="card bg-secondary">
+  <div class="card-header bg-primary no-text">Ratiomatic</div>
+  <div class="card-body bg-secondary text-light" *ngIf="!supportsWebWorkers">
+    Your browser doesn't support this tool!
+  </div>
+  <div class="card-body bg-secondary" *ngIf="supportsWebWorkers">
+    <div class="d-flex text-light mb-3">
+      <input type="text" class="form-control text-light border-light text-center" [class.bg-dark]="!inputsLocked" [class.bg-secondary]="inputsLocked" [readonly]="inputsLocked" [(ngModel)]="numerator" appClickSelect>
+      <span class="d-flex align-items-center ml-3 mr-3">/</span>
+      <input type="text" class="form-control text-light border-light text-center" [class.bg-dark]="!inputsLocked" [class.bg-secondary]="inputsLocked" [readonly]="inputsLocked" [(ngModel)]="denominator" appClickSelect>
+    </div>
+    <div class="d-flex justify-content-center" [class.mb-5]="inputsLocked && !loading">
+      <button [disabled]="!checkInputsValid()" class="btn btn-primary text-light" (click)="inputsLocked ? reset() : submit()">{{inputsLocked ? 'reset' : 'submit'}}</button>
+    </div>
+
+    <div class="d-flex text-light mb-3" *ngIf="inputsLocked && !loading">
+      <input (input)="handleNumeratorChange($event)" [value]="subNumerator" type="text" class="form-control text-light border-light text-center bg-dark" appClickSelect>
+      <span class="d-flex align-items-center ml-3 mr-3">/</span>
+      <input (input)="handleDenominatorChange($event)" [value]="subDenominator" type="text" class="form-control text-light border-light text-center bg-dark" appClickSelect>
+    </div>
+
+    <div class="list-group" *ngIf="inputsLocked && !loading">
+      <a *ngFor="let ratio of subRatios" (click)="handleRatioSelect(ratio)" class="list-group-item list-group-item-action bg-dark text-light cursor-pointer">
+        <p class="m-0 no-text d-grid">
+          <span class="d-flex align-items-center justify-content-end">{{ratio[0]}}</span>
+          <img class="ml-auto mr-auto" src="../../../../../assets/images/ratiomatic/ratiomatic-white.png">
+          <span class="d-flex align-items-center">{{ratio[1]}}</span>
+        </p>
+      </a>
+    </div>
+  </div>
+</div>

@@ -34,13 +34,13 @@ export const tools: Tool[] = [
     component: GmlJavadocGenComponent,
     category: Category.GAMEMAKER
   },
-  {
-    title: 'JSON 2 Data Structure',
-    description: 'A simple tool to help understand GML data structures. Converts JSON into GML.',
-    route: 'gm/json-ds',
-    component: JsonToDsComponent,
-    category: Category.GAMEMAKER
-  },
+  // {
+  //   title: 'JSON 2 Data Structure',
+  //   description: 'A simple tool to help understand GML data structures. Converts JSON into GML.',
+  //   route: 'gm/json-ds',
+  //   component: JsonToDsComponent,
+  //   category: Category.GAMEMAKER
+  // },
 
   {
     title: 'Ratiomatic',

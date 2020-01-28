@@ -7,13 +7,26 @@ import { ColorPickerModule } from 'ngx-color-picker';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-import * as components from './components';
+import {
+  ColorPickerComponent,
+  GmlJavadocGenComponent,
+  JsonToDsComponent,
+  NavbarComponent,
+  RatiosComponent,
+  ToolListComponent
+} from './components';
+
 import { ClickSelectDirective } from './directives/click-select.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ...Object.values(components),
+    ColorPickerComponent,
+    GmlJavadocGenComponent,
+    JsonToDsComponent,
+    NavbarComponent,
+    RatiosComponent,
+    ToolListComponent,
     ClickSelectDirective
   ],
   imports: [

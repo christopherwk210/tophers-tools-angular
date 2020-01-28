@@ -14,9 +14,17 @@ html, body {
   user-select: none;
 }
 
+.cursor-pointer {
+  cursor: pointer !important;
+}
+
 .form-check, .form-check * {
   user-select: none;
   cursor: pointer !important;
+}
+
+.d-grid {
+  display: grid;
 }
 
 // Color picker theme

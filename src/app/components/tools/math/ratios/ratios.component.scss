@@ -1,0 +1,20 @@
+@import "../../../../../styles/vars.scss";
+
+:host {
+  @include tool-card-container;
+}
+
+.cursor-pointer * {
+  cursor: pointer !important;
+}
+
+.list-group {
+  border: 1px solid white;
+  max-height: 300px;
+  overflow: scroll;
+}
+
+.d-grid {
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+}
