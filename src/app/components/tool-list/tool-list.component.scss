@@ -1,0 +1,25 @@
+@import "../../../styles/vars.scss";
+
+:host {
+  @include tool-card-container;
+}
+
+.card {
+  width: 100%;
+  max-width: 960px;
+  margin: auto;
+}
+
+.card-body {
+  overflow-y: scroll;
+}
+
+@media (max-width: map-get($grid-breakpoints, sm)) {
+  :host {
+    padding: 0;
+  }
+
+  .card {
+    height: 100%;
+  }
+}

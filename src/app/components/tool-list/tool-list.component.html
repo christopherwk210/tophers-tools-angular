@@ -1,0 +1,14 @@
+<div class="card bg-secondary">
+  <div class="card-header bg-primary no-text d-none d-sm-block">Tools</div>
+  <div class="card-body bg-secondary p-0">
+    <div class="list-group list-group-flush">
+      <ng-container *ngFor="let category of toolCategories">
+        <div class="list-group-item bg-dark text-light no-text">{{category}}</div>
+        <a *ngFor="let tool of organizedTools[category]" [routerLink]="tool.route" class="list-group-item list-group-item-action bg-secondary text-light">
+          <h5 class="mb-1">{{tool.title}}</h5>
+          <p class="m-0">{{tool.description}}</p>
+        </a>
+      </ng-container>
+    </div>
+  </div>
+</div>

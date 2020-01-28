@@ -1,5 +1,15 @@
+@import "./styles/cascadia-mono.scss";
+@import "./styles/vars.scss";
 @import "../node_modules/bootstrap/scss/bootstrap";
 
 html, body {
   background-color: #1E1E1C;
+  height: 100%;
+  overflow: hidden;
+  font-family: 'Cascadia Mono', Courier, monospace;
+}
+
+.no-text {
+  cursor: default;
+  user-select: none;
 }

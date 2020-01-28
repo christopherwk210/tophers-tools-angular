@@ -1,0 +1,33 @@
+// Bootstrap overrides
+
+$theme-colors: (
+  "primary": #027BD3,
+  "secondary": #2F2E34,
+  "dark": #1E1E1C
+);
+
+$border-radius: 0;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+);
+
+// Mixins
+
+@mixin tool-container {
+  flex: 1;
+  display: flex;
+  overflow-y: scroll;
+}
+
+@mixin tool-card-container {
+  @include tool-container;
+
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+}

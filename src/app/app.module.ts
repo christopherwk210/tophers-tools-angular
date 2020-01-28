@@ -4,9 +4,12 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+import * as components from './components';
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ...Object.values(components)
   ],
   imports: [
     BrowserModule,
