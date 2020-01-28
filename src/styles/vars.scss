@@ -30,4 +30,22 @@ $grid-breakpoints: (
   justify-content: center;
   align-items: center;
   padding: 1em;
+
+  .card {
+    width: 100%;
+    max-width: 960px;
+    margin: auto;
+  }
+  
+  .card-body {
+    overflow-y: scroll;
+  }
+
+  @media (max-width: map-get($grid-breakpoints, sm)) {
+    padding: 0;
+  
+    .card {
+      height: 100%;
+    }
+  }
 }

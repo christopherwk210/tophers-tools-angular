@@ -1,6 +1,66 @@
 <div class="card bg-secondary">
-  <div class="card-header bg-primary no-text d-none d-sm-block">Color Picker</div>
-  <div class="card-body bg-secondary p-0">
-    test
+  <div class="card-header bg-primary no-text">Color Picker</div>
+  <div class="card-body bg-secondary">
+    <div class="d-flex">
+      <span
+        [(colorPicker)]="currentColor"
+        [style.background]="currentColor"
+        [cpToggle]="true"
+        [cpDialogDisplay]="'inline'"
+        [cpDisableInput]="true"
+        [cpAlphaChannel]="'disabled'"
+        (colorPickerChange)="handleColorInputChange($event)"
+      ></span>
+      <div class="d-flex justify-content-between flex-grow-1 text-light">
+
+        <!-- HEX Values -->
+        <div class="flex-grow-1 pl-3">
+          <div class="form-group">
+            <label for="hex">HEX</label>
+            <input type="text" maxlength="7" [value]="hex" (input)="handleHexInput($event)" class="form-control bg-dark text-light border-light" id="hex" appClickSelect>
+          </div>
+          <div class="form-group">
+            <label for="gml-hex">GML HEX</label>
+            <input type="text" maxlength="7" [value]="gmlHex" (input)="handleGmlHexInput($event)" class="form-control bg-dark text-light border-light" id="gml-hex" appClickSelect>
+          </div>
+          <div class="form-group">
+            <label for="gml-raw">GML RAW</label>
+            <input type="text" maxlength="8" [value]="gmlRaw" class="form-control bg-secondary text-light border-light" id="gml-raw" readonly="readonly" appClickSelect>
+          </div>
+        </div>
+
+        <!-- RGB -->
+        <div class="flex-grow-1 pl-3">
+          <div class="form-group">
+            <label for="r">R</label>
+            <input type="text" maxlength="3" [value]="r" (input)="handleRGBInput($event, true, false, false)" class="form-control bg-dark text-light border-light" id="r" appClickSelect>
+          </div>
+          <div class="form-group">
+            <label for="g">G</label>
+            <input type="text" maxlength="3" [value]="g" (input)="handleRGBInput($event, false, true, false)" class="form-control bg-dark text-light border-light" id="g" appClickSelect>
+          </div>
+          <div class="form-group">
+            <label for="b">B</label>
+            <input type="text" maxlength="3" [value]="b" (input)="handleRGBInput($event, false, false, true)" class="form-control bg-dark text-light border-light" id="b" appClickSelect>
+          </div>
+        </div>
+
+        <!-- HSV -->
+        <div class="flex-grow-1 pl-3">
+          <div class="form-group">
+            <label for="h">H</label>
+            <input type="text" maxlength="3" [value]="h" (input)="handleHSVInput($event, true, false, false)" class="form-control bg-dark text-light border-light" id="h" appClickSelect>
+          </div>
+          <div class="form-group">
+            <label for="s">S</label>
+            <input type="text" maxlength="3" [value]="s" (input)="handleHSVInput($event, false, true, false)" class="form-control bg-dark text-light border-light" id="s" appClickSelect>
+          </div>
+          <div class="form-group">
+            <label for="v">V</label>
+            <input type="text" maxlength="3" [value]="v" (input)="handleHSVInput($event, false, false, true)" class="form-control bg-dark text-light border-light" id="v" appClickSelect>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

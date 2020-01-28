@@ -13,3 +13,13 @@ html, body {
   cursor: default;
   user-select: none;
 }
+
+// Color picker theme
+.color-picker {
+  border-color: transparent !important;
+  background-color: transparent !important;
+}
+
+.color-picker .cursor {
+  border-color: #b5b5b5 !important;
+}
