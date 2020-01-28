@@ -1,7 +1,7 @@
 <div class="card bg-secondary">
   <div class="card-header bg-primary no-text">Color Picker</div>
   <div class="card-body bg-secondary">
-    <div class="d-flex">
+    <div class="d-block d-md-flex">
       <span
         [(colorPicker)]="currentColor"
         [style.background]="currentColor"
@@ -60,6 +60,15 @@
             <input type="text" maxlength="3" [value]="v" (input)="handleHSVInput($event, false, false, true)" class="form-control bg-dark text-light border-light" id="v" appClickSelect>
           </div>
         </div>
+      </div>
+    </div>
+
+    <div class="d-block mt-4">
+      <div class="form-group">
+        <input type="text" [value]="gmlRGB" class="form-control bg-secondary text-light border-light" readonly="readonly" appClickSelect>
+      </div>
+      <div class="form-group mb-0">
+        <input type="text" [value]="gmlHSV" class="form-control bg-secondary text-light border-light" readonly="readonly" appClickSelect>
       </div>
     </div>
   </div>

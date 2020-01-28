@@ -28,6 +28,12 @@ export class ColorPickerComponent implements OnInit {
   s = 0;
   v = 0;
 
+  gmlRGBbase = 'make_colour_rgb';
+  gmlHSVbase = 'make_colour_hsv';
+
+  gmlRGB = 'make_colour_rgb(0, 0, 0);';
+  gmlHSV = 'make_colour_hsv(0, 0, 0);';
+
   hexRegex = /^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$/;
 
   constructor() { }
@@ -153,5 +159,8 @@ export class ColorPickerComponent implements OnInit {
     this.h = hsv[0];
     this.s = hsv[1];
     this.v = hsv[2];
+
+    this.gmlHSV = `${this.gmlHSVbase}(${this.h}, ${this.s}, ${this.v})`;
+    this.gmlRGB = `${this.gmlRGBbase}(${this.r}, ${this.g}, ${this.b})`;
   }
 }
