@@ -1,5 +1,8 @@
 <div class="card bg-secondary">
-  <div class="card-header bg-primary no-text">GML JavaDoc Gen</div>
+  <div class="card-header bg-primary no-text d-flex">
+    GML JavaDoc Gen
+    <a routerLink="/" class="btn-link text-dark ml-auto">Back</a>
+  </div>
   <div class="card-body bg-secondary">
     <div class="form-group form-check">
       <input type="checkbox" class="form-check-input" id="args-switch" [value]="argsSwitch" (input)="handleSwitchToggle($event)">

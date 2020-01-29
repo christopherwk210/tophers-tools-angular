@@ -1,5 +1,8 @@
 <div class="card bg-secondary">
-  <div class="card-header bg-primary no-text">Ratiomatic</div>
+  <div class="card-header bg-primary no-text d-flex">
+    Ratiomatic
+    <a routerLink="/" class="btn-link text-dark ml-auto">Back</a>
+  </div>
   <div class="card-body bg-secondary text-light" *ngIf="!supportsWebWorkers">
     Your browser doesn't support this tool!
   </div>
