@@ -23,6 +23,9 @@ export class RatiosComponent implements OnInit {
   ngOnInit() {}
 
   async submit() {
+    if (this.inputsLocked) return;
+    if (!this.checkInputsValid()) return;
+
     this.inputsLocked = true;
     this.loading = true;
     const result = await this.calculateRatios(this.numerator, this.denominator);

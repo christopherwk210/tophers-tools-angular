@@ -8,9 +8,9 @@
   </div>
   <div class="card-body bg-secondary" *ngIf="supportsWebWorkers">
     <div class="d-flex text-light mb-3">
-      <input type="text" class="form-control text-light border-light text-center" [class.bg-dark]="!inputsLocked" [class.bg-secondary]="inputsLocked" [readonly]="inputsLocked" [(ngModel)]="numerator" appClickSelect>
+      <input type="text" class="form-control text-light border-light text-center" (keydown.enter)="submit()" [class.bg-dark]="!inputsLocked" [class.bg-secondary]="inputsLocked" [readonly]="inputsLocked" [(ngModel)]="numerator" appClickSelect>
       <span class="d-flex align-items-center ml-3 mr-3">/</span>
-      <input type="text" class="form-control text-light border-light text-center" [class.bg-dark]="!inputsLocked" [class.bg-secondary]="inputsLocked" [readonly]="inputsLocked" [(ngModel)]="denominator" appClickSelect>
+      <input type="text" class="form-control text-light border-light text-center" (keydown.enter)="submit()" [class.bg-dark]="!inputsLocked" [class.bg-secondary]="inputsLocked" [readonly]="inputsLocked" [(ngModel)]="denominator" appClickSelect>
     </div>
     <div class="d-flex justify-content-center" [class.mb-5]="inputsLocked && !loading">
       <button [disabled]="!checkInputsValid()" class="btn btn-primary text-light" (click)="inputsLocked ? reset() : submit()">{{inputsLocked ? 'reset' : 'submit'}}</button>
