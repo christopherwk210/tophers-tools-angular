@@ -1,4 +1,4 @@
-# GML JavaDoc Gen
+# [GML JavaDoc Gen](https://chrisanselmo.com/tools/#/gm/gml-javadoc-gen)
 
 Quickly turn GameMaker: Studio script comments into GameMaker Studio 2 compatible JavaDoc comments. This is useful for users who are just migrating from GMS 1.X to GMS 2.X, as GMS 2 changed the way script hinting works from single comment lines to JavaDoc-ish script headers.
 
