@@ -1,11 +1,15 @@
 <div class="card bg-secondary">
   <div class="card-header bg-primary no-text d-flex">
     Ratiomatic
-    <a routerLink="/" class="btn-link text-dark ml-auto">Back</a>
+    <div class="ml-auto">
+      <a href="https://github.com/christopherwk210/tophers-tools/tree/master/src/app/components/tools/math/ratios" target="_blank" class="btn-link text-dark ml-auto mr-3">About</a>
+      <a routerLink="/" class="btn-link text-dark ml-auto">Back</a>
+    </div>
   </div>
   <div class="card-body bg-secondary text-light" *ngIf="!supportsWebWorkers">
     Your browser doesn't support this tool!
   </div>
+
   <div class="card-body bg-secondary" *ngIf="supportsWebWorkers">
     <div class="d-flex text-light mb-3">
       <input type="text" class="form-control text-light border-light text-center" (keydown.enter)="submit()" [class.bg-dark]="!inputsLocked" [class.bg-secondary]="inputsLocked" [readonly]="inputsLocked" [(ngModel)]="numerator" appClickSelect>
