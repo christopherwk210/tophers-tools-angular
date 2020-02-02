@@ -14,3 +14,4 @@ An organized collection of various useful online tools, made with Angular.
 ### Math
 
 - [Ratiomatic](./src/app/components/tools/math/ratios) - Automatically calculate ratios. Handy for working with resolutions.
+- [Linear Equation Solver](./src/app/components/tools/math/linear-equation-solver) - Two points go in, slope and y-intercept come out.
