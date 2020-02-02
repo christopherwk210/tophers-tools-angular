@@ -35,5 +35,11 @@ export const tools: Tool[] = [
     description: 'Automatically calculate ratios. Handy for working with resolutions.',
     route: '/math/ratiomatic',
     category: Category.MATH
+  },
+  {
+    title: 'Linear Equation Solver',
+    description: 'Two points go in, slope and y-intercept come out.',
+    route: '/math/linear-equations',
+    category: Category.MATH
   }
 ];

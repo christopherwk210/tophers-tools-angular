@@ -13,7 +13,8 @@ import {
   JsonToDsComponent,
   NavbarComponent,
   RatiosComponent,
-  ToolListComponent
+  ToolListComponent,
+  LinearEquationSolverComponent
 } from './components';
 
 import { ClickSelectDirective } from './directives/click-select.directive';
@@ -27,7 +28,8 @@ import { ClickSelectDirective } from './directives/click-select.directive';
     NavbarComponent,
     RatiosComponent,
     ToolListComponent,
-    ClickSelectDirective
+    ClickSelectDirective,
+    LinearEquationSolverComponent
   ],
   imports: [
     FormsModule,

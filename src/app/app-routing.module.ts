@@ -7,7 +7,8 @@ import {
   ColorPickerComponent,
   GmlJavadocGenComponent,
   JsonToDsComponent,
-  RatiosComponent
+  RatiosComponent,
+  LinearEquationSolverComponent
 } from './components/tools';
 
 const routes: Routes = [
@@ -26,6 +27,10 @@ const routes: Routes = [
   {
     path: 'math/ratiomatic',
     component: RatiosComponent
+  },
+  {
+    path: 'math/linear-equations',
+    component: LinearEquationSolverComponent
   }
 ];
 

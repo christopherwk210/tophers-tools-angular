@@ -1,0 +1,9 @@
+@import "../../../../../styles/vars.scss";
+
+:host {
+  @include tool-card-container;
+}
+
+.invalid {
+  opacity: 0.5;
+}

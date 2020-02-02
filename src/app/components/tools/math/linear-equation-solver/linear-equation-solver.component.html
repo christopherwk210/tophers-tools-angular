@@ -1,0 +1,31 @@
+<div class="card bg-secondary">
+  <div class="card-header bg-primary no-text d-flex">
+    Linear Equation Solver
+    <div class="ml-auto">
+      <a href="https://github.com/christopherwk210/tophers-tools/tree/master/src/app/components/tools/math/linear-equation-solver" target="_blank" class="btn-link text-dark ml-auto mr-3">About</a>
+      <a routerLink="/" class="btn-link text-dark ml-auto">Back</a>
+    </div>
+  </div>
+
+  <div class="card-body bg-secondary text-light">
+    First point
+    <div class="d-flex text-light mb-3">
+      <input type="text" class="form-control text-light border-light text-center bg-dark" [(ngModel)]="points[0].x" (ngModelChange)="handlePointUpdate()" appClickSelect>
+      <span class="d-flex align-items-center ml-3 mr-3">/</span>
+      <input type="text" class="form-control text-light border-light text-center bg-dark" [(ngModel)]="points[0].y" (ngModelChange)="handlePointUpdate()" appClickSelect>
+    </div>
+    Second point
+    <div class="d-flex text-light mb-5">
+      <input type="text" class="form-control text-light border-light text-center bg-dark" [(ngModel)]="points[1].x" (ngModelChange)="handlePointUpdate()" appClickSelect>
+      <span class="d-flex align-items-center ml-3 mr-3">/</span>
+      <input type="text" class="form-control text-light border-light text-center bg-dark" [(ngModel)]="points[1].y" (ngModelChange)="handlePointUpdate()" appClickSelect>
+    </div>
+    <p class="mb-3 text-center no-text" style="opacity: 0.5">y = slope(x) + intercept</p>
+    <div [class.invalid]="invalid">
+      Slope
+      <input type="text" class="form-control text-light border-light text-center bg-secondary mb-3" readonly [(ngModel)]="slope" appClickSelect>
+      Y Intercept
+      <input type="text" class="form-control text-light border-light text-center bg-secondary" readonly [(ngModel)]="intercept" appClickSelect>
+    </div>
+  </div>
+</div>
